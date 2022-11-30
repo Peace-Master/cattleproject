@@ -1,27 +1,16 @@
 import streamlit as st
 import pandas as pd
-from PIL import Image
-import pandas as pd
-import random
 from streamlit_option_menu import option_menu
-#import D_tree as dt
 
-from datetime import datetime
-from folium.plugins import HeatMap
 from streamlit_folium import folium_static
 import matplotlib.pyplot as plt
 import flickrapi
-import random
-from dotenv import load_dotenv
-import os
-import urllib
-import folium
 
 import register as rr
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
-
+from PIL import Image
 
 import numpy as np # Scientific computing packages - Array
 from pandas import Series, DataFrame
@@ -124,44 +113,12 @@ def main():
                                    #st.map(data)
                                    
                                    data=pd.read_csv('symptoms.csv')
-                                   n=random.randint(9,20)
+                                   #n=random.randint(9,20)
                                    test = data.astype(str)
                                    df=test
                                    st.markdown("### symptoms Data View")
                                    st.bar_chart(test )
-                                   #map_heatmap = folium.Map(location=[48.1351, 11.5820], zoom_start=11)
-                                   #s1,s2,s3,s4=st.beta_columns(4)
-                                   #s1.checkbox("Abortion")
-                                   #s2.checkbox("mouth and feet blisters")
-                                   #s3.checkbox("calf dropping the head")
-                                   #s4.checkbox("coughing")
-                                   #s1.checkbox("dropping in milk production")
-                                   #s2.checkbox("dull and depressed")
-                                   #s3.checkbox("fever")
-                                   #s4.checkbox("teats harden")
-                                   #s1.checkbox("heavy breathing")
-                                   #s2.checkbox("high temperature")
-                                   #s3.checkbox("infertility")
-                                   #s4.checkbox("lameness")
-                                   #s1.checkbox("loss of appetite")
-
-                                   #s1.checkbox("lymph nodes")
-                                   #s2.checkbox("Nasal discharge")
-                                   #s3.checkbox("udder pain")
-                                   #s4.checkbox("retention of fetal membranes")
-                                   #s1.checkbox("stillbirth")
-                                   #s2.checkbox("Swollen balls")
-                                   #s3.checkbox("swollen udder")
-                                   #s4.checkbox("Watery Milk")
-                                   #s1.checkbox("Weak calf born")
-                                   #s2.checkbox("weight loss")
-                                   #s3.checkbox("anaemia")
-                                   #s4.checkbox("anorexia")
-                                   #s1.checkbox("blisters on teats")
-
-                                   #s2.checkbox("comeal opacity")
-                                   #s3.checkbox("diahorea")
-                                   #s4.checkbox("ti34k")
+                                   
                                    dataup=st.file_uploader("upload a csv file",type=["csv"])
                                    if dataup is not None:
                                            #st.write(dt.predict(data))
